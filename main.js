@@ -10,7 +10,6 @@ async function getPokemon() {
         } 
 
         const pokemonData = await response.json();
-        console.log(pokemonData)
         let pokemon = {
             name: pokemonData.name,
             image: pokemonData.sprites.front_default,
@@ -32,8 +31,8 @@ getPokemon();
             const pokemonInfo = pokemonArray.map((pokemonArray) =>  `
             <li class="card" style="padding: 2%;margin: 2%;list-style-type: none;">
             <img class="card-image" src="${pokemonArray.image}"/>
-            <h2 class="card-title"> ${pokemonArray.name}</h2>
-            <p class="card-subtitle">Type: ${pokemonArray.type}</p>
+            <h2 class="card-title"> ${pokemonArray.name.charAt(0).toUpperCase() + pokemonArray.name.slice(1)}</h2>
+            <p class="card-subtitle">Type: ${pokemonArray.type.charAt(0).toUpperCase() + pokemonArray.type.slice(1)}</p>
         </li>
       `
             ).join(' ')
