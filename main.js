@@ -10,12 +10,12 @@ async function getPokemon() {
         } 
 
         const pokemonData = await response.json();
-
+        console.log(pokemonData)
         let pokemon = {
             name: pokemonData.name,
             image: pokemonData.sprites.front_default,
             id: pokemonData.id,
-            type: pokemonData.type
+            type: pokemonData.types[0].type.name
         }
         // console.log(pokemon);
     
@@ -36,8 +36,7 @@ getPokemon();
             <p class="card-subtitle">Type: ${pokemonArray.type}</p>
         </li>
       `
-            )
+            ).join(' ')
 
         pokedex.innerHTML = pokemonInfo;
-
  }

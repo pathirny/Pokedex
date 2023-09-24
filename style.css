@@ -1,9 +1,27 @@
-.info{
-    text-align: center;
+body{
+    background-color: red;
+    display: flex;
 }
+
+.info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: solid 1px black;
+    width: 75%;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
 
 #pokedex {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+}
+
+.card{
+    border: solid black 1px;
+    border-radius: 20px;
 }
