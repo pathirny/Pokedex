@@ -1,3 +1,5 @@
+let pokedex = document.getElementById("pokedex");
+
 async function getPokemon() {
 
     let pokemonArray = [];
@@ -21,12 +23,13 @@ async function getPokemon() {
         pokemonArray.push(pokemon);
     }
     displayPokemon(pokemonArray)
+    searchPokemon();
 }
 
 getPokemon();
 
  async function displayPokemon (pokemonArray){
-    let pokedex = document.getElementById("pokedex");
+
 
             const pokemonInfo = pokemonArray.map((pokemonArray) =>  `
             <li class="card" style="padding: 2%;margin: 2%;list-style-type: none;">
@@ -38,4 +41,18 @@ getPokemon();
             ).join(' ')
 
         pokedex.innerHTML = pokemonInfo;
+ }
+
+ async function searchPokemon(){
+    let search = document.getElementById("searchbar").value;
+    search = search.toLowerCase();
+    let pokemonX = document.getElementsByClassName("card");
+
+    for (let i= 0; i < pokemonX.length; i++){
+        if(!pokemonX[i].innerHTML.toLowerCase().includes(search)){
+            pokemonX[i].style.display = "none";
+        } else {
+            pokemonX[i].style.display = "list-item"
+        }
+    }
  }
