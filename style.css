@@ -1,0 +1,9 @@
+.info{
+    text-align: center;
+}
+
+#pokedex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
