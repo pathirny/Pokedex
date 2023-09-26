@@ -30,4 +30,5 @@ body{
     border: solid black 1px;
     border-radius: 20px;
     width: 120px;
+    text-align: center;
 }
