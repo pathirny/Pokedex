@@ -64,3 +64,6 @@ getPokemon();
 
 // When clicked change the size of the list-item box (.card) to be longer
 // display new inforomation from the api for each pokemon
+// will need to change the api to get the right data
+// want only information for the element which was clicked on
+
