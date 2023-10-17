@@ -59,3 +59,8 @@ getPokemon();
         }
     }
  }
+
+ // Create a click function which stretches out the pokemon information- displaying more from the api
+
+// When clicked change the size of the list-item box (.card) to be longer
+// display new inforomation from the api for each pokemon
