@@ -1,4 +1,3 @@
-import VanillaTilt from "vanilla-tilt";
 //declare the pokedex variable
 let pokedex = document.getElementById("pokedex");
 //function which fetches the API
@@ -50,9 +49,7 @@ async function displayPokemon(pokemonArray) {
       `
     )
     .join(" ");
-
   pokedex.innerHTML = pokemonInfo;
-  VanillaTilt(pokemonInfo);
 }
 //search function which looks for the value from the search box
 async function searchPokemon() {
